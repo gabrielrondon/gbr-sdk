@@ -14,6 +14,8 @@
     "setup:quick": "node cli.js setup:quick",
     "db:status": "node cli.js status",
     "db:reset": "node cli.js reset",
+    "example": "node example-usage.js",
+    "test:modules": "node -e \"require('./example-usage').runExamples()\"",
     "postinstall": "node -e \"console.log('\\n🚀 Run \\\"npx gbr-csv setup\\\" to configure database support\\n')\""
   },
   "keywords": [
