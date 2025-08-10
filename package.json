@@ -1,0 +1,43 @@
+{
+  "name": "gbr-csv",
+  "version": "1.0.2",
+  "description": "Um SDK de alta performance em WebAssembly para processar arquivos CSV.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "gbr-csv": "./cli.js"
+  },
+  "scripts": {
+    "build": "wasm-pack build ./processor --target nodejs --out-dir ./pkg",
+    "prepublishOnly": "npm run build",
+    "setup": "node cli.js setup",
+    "setup:quick": "node cli.js setup:quick",
+    "db:status": "node cli.js status",
+    "db:reset": "node cli.js reset",
+    "postinstall": "node -e \"console.log('\\n🚀 Run \\\"npx gbr-csv setup\\\" to configure database support\\n')\""
+  },
+  "keywords": [
+    "csv",
+    "parser",
+    "validator",
+    "hash",
+    "sha256",
+    "wasm",
+    "rust"
+  ],
+  "author": "Gabriel Rondon",
+  "license": "ISC",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "cli.js",
+    "lib/",
+    "pkg",
+    "README.md",
+    "DATABASE_SETUP.md"
+  ],
+  "optionalDependencies": {
+    "pg": "^8.11.0",
+    "mysql2": "^3.6.0"
+  }
+}

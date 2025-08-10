@@ -1,0 +1,168 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Production builds
+dist/
+build/
+*.tgz
+
+# WASM build artifacts (keep only final files)
+processor/target/
+processor/Cargo.lock
+processor/pkg/.gitignore
+# Keep the final WASM files but ignore build artifacts
+processor/pkg/package-lock.json
+processor/pkg/node_modules/
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+.env.gbr-csv
+*.pem
+*.key
+*.crt
+*.p12
+
+# Database
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+data/
+backups/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+log-*.txt
+
+# Testing
+coverage/
+.nyc_output/
+test-results/
+*.lcov
+
+# Cache
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.turbo/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# License files (keep these secure)
+licenses/
+*.license
+license.key
+
+# Customer data (never commit)
+customer-data/
+uploads/
+processed/
+exports/
+
+# Documentation builds
+docs/_build/
+docs/.jekyll-cache/
+
+# Python (if adding Python SDK)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# Java (if adding Java SDK)
+*.class
+*.jar
+*.war
+*.ear
+target/
+.gradle/
+
+# Monitoring
+.metrics/
+.traces/
+
+# Security - NEVER commit these
+private/
+secrets/
+certificates/
+*.private
+*.secret
+id_rsa*
+known_hosts
+
+# White-label customizations (client specific)
+themes/custom/
+plugins/private/
+white-label/*/
+
+# Generated files that shouldn't be in repo
+.npm/
+.yarn/
+.pnp.*
+.yarn-integrity
+
+# Local development
+local/
+dev-data/
+sandbox/
+
+# Benchmarks
+benchmarks/results/
+
+# Backup files
+*.backup
+*.bak
+*.old
+~*
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Lock files (controversial - you might want to keep package-lock.json)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Keep these
+!.gitkeep
+!.npmignore
+!processor/src/
+!processor/Cargo.toml
